@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi_TEST.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_fd_TEST.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 13:13:30 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 13:14:05 by andchris         ###   ########.fr       */
+/*   Created: 2021/11/01 20:54:23 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 20:54:23 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char    f(unsigned int i, char c)
-{
-    if (i > 0)
-        return (c = 'x');
-    else
-        return (c);
-}
-
 int main(void)
 {
-    char    *str = "andre";
+    char    *str = "andre christofori";
+    int     fd = 1;
 
-    printf("Original: %s | New: %s\n0", str, ft_strmapi(str, f));
+    printf("String: %s | Fd: %d\n", str, fd);
+    ft_putstr_fd(str, fd);
 }

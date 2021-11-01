@@ -14,7 +14,7 @@
 // This function returns the converted integral number as an int value. If no valid conversion could be performed, it returns zero.
 //atoi: stdlib.h
 
-#include "../libft.h"
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

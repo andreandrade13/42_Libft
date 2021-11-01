@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
+
+static size_t	len_rtn(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
+}
 
 void    ft_putstr_fd(char *s, int fd)
 {
-    write(fd, s, ft_strlen(s));
+    write(fd, s, len_rtn(s));
 }
