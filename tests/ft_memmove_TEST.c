@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memmove_TEST.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 11:58:07 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 09:31:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/10/21 16:30:35 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 10:11:33 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include "../libft.h"
 
-int	ft_isalnum(int c)
+int main(void)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+    char  src[] = "andre";
+    char    dst[] = "ypjkl";
+    int n = 3;
+
+    printf("Before -> src: %s | dst: %s | n: %d\n", src, dst, n);
+    // ft_memmove(dst, src, n);
+    memmove(dst, src, n); //standard function
+    printf("Before -> src: %s | dst: %s | n: %d\n", src, dst, n);
 }

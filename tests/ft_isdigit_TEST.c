@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit_TEST.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 11:58:07 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 09:31:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/10/21 11:36:57 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 09:30:18 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-int	ft_isalnum(int c)
+int main(void)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+    int a = '5';
+    int b = '%';
+    int c = '0';
+
+    printf("a: %c | ft_isdigit: %d | isdigit: %d\n", a, ft_isdigit(a), isdigit(a));   
+    printf("b: %c | ft_isdigit: %d | isdigit: %d\n", b, ft_isdigit(b), isdigit(b));   
+    printf("c: %c | ft_isdigit: %d | isdigit: %d\n", c, ft_isdigit(c), isdigit(c));   
 }

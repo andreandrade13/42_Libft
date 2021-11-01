@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc_TEST.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 11:58:07 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 09:31:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/10/24 16:11:50 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 11:48:23 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "../libft.h"
 
-int	ft_isalnum(int c)
+int main(void)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+    size_t num = 55;
+    size_t size = sizeof(char);
+
+    printf("num: %ld\nsize: %ld\nstring (with zeros): %p\n", num, size, (char *)ft_calloc(num, size));
+    printf("num: %ld\nsize: %ld\nstring (with zeros): %p\n", num, size, calloc(num, size)); //standard
 }

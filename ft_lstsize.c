@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 11:58:07 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 09:31:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/10/29 10:26:12 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 09:13:43 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int ft_lstsize(t_list *lst)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+    unsigned int    size;
+
+    size = 0;
+    while (lst)
+    {
+        lst = lst->next;
+        size++;
+    }
+    return (size);
 }

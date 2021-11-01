@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_itoa_TEST.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 11:58:07 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 09:31:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/10/25 17:08:12 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 13:09:41 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include "../libft.h"
 
-int	ft_isalnum(int c)
+int main(void)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'));
+    int n = 2;
+
+    printf("number: %d | string: %s\n", n, ft_itoa(n));
 }

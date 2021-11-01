@@ -6,7 +6,7 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 11:58:37 by andchris          #+#    #+#             */
-/*   Updated: 2021/10/29 10:13:26 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/01 10:32:57 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct  s_list
 
 
 
-/* <string.h> library */
+/* <ctype.h> library */
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -69,6 +69,9 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+
+/* Bonus */
+
 
 
 #endif
