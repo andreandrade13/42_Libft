@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri_TEST.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 23:08:09 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/02 08:56:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/11/01 20:39:59 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/01 20:39:59 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-void    ft_putendl_fd(char *s, int fd)
+char    f(unsigned int i, char c)
 {
-    int i;
+    if (i > 0)
+        return (c = 'x');
+    else
+        return (c);
+}
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        ++i;
-    }
-    write(fd, "\n", 1);
+int main(void)
+{
+    char    *str = "andre";
+
+    // printf("Original: %s | New: %s\n", str, ft_striteri(str, f));
 }

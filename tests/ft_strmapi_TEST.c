@@ -10,10 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #include <stdio.h>
+
+char    f(unsigned int i, char c)
+{
+    if (i > 0)
+        return (c = 'x');
+    else
+        return (c);
+}
 
 int main(void)
 {
-    
+    char    *str = "andre";
+
+    printf("Original: %s | New: %s\n0", str, ft_strmapi(str, f));
 }

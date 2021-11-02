@@ -1,26 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap_TEST.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 23:08:09 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/02 08:56:52 by andchris         ###   ########.fr       */
+/*   Created: 2021/11/02 11:27:53 by andchris          #+#    #+#             */
+/*   Updated: 2021/11/02 11:28:06 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-void    ft_putendl_fd(char *s, int fd)
-{
-    int i;
-
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        ++i;
-    }
-    write(fd, "\n", 1);
-}
