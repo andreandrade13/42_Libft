@@ -13,55 +13,50 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static size_t   len_rtn(const char *s)
+static size_t	len_rtn(const char *s)
 {
-    size_t  len;
-    
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
 
-static char *dup_str(const char *str1)
+static size_t	size_rtn(char const *s, unsigned int start, size_t len)
 {
-    int     i;
-    char    *p;
+	size_t	s_len;
+	size_t	size;
 
-    i = 0;
-    while (str1[i])
-        i++;
-    if (!(p = malloc((i + 1) * sizeof(char))))
-        return (0);
-    i = -1;
-    while (str1[++i])
-        p[i] = str1[i];
-    p[i] = '\0';
-    return (p);
+	s_len = len_rtn(s);
+	if (start >= s_len)
+		size = 0;
+	else if (len > (s_len - start))
+		size = s_len - start;
+	else
+		size = len;
+	return (size);
 }
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *p;
-    size_t  i;
-    size_t  memory;
+	char	*substring;
+	size_t	size;
+	size_t	i;
 
-    if (s == NULL)
-        return (NULL);
-    i = 0;
-    memory = len_rtn(&s[start]);
-    if (start > len_rtn(s))
-        return (dup_str(""));
-    if (memory < len)
-        len = memory;
-    p = malloc(len + 1);
-    if (p == NULL)
-        return (NULL);
-    while (s[start + i] && i < len)
-    {
-        p[i] = s[start + i];
-        i++;
-    }
-    p[i] = '\0';
-    return (p);
+	size = size_rtn(s, start, len);
+	if (!size || s == NULL)
+		return (ft_calloc(1, 1));
+	else
+		substring = malloc((size + 1) * sizeof(char));
+	if (!substring)
+		return (NULL);
+	i = 0;
+	while (i < size)
+	{
+		substring[i] = s[i + start];
+		++i;
+	}
+	substring[i] = '\0';
+	return (substring);
 }

@@ -6,7 +6,7 @@
 #    By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 11:58:41 by andchris          #+#    #+#              #
-#    Updated: 2021/10/29 12:44:21 by andchris         ###   ########.fr        #
+#    Updated: 2021/11/11 17:07:55 by andchris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,16 +24,12 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
 		ft_lstmap.c 
 
-# PATH_SRC = ./source/ //CHECK!
-
-# INCLUDE = ./include/ //CHECK
-
 OBJ = ${SRC:.c=.o}
 
 OBJBONUS = ${BONUS:.c=.o}
 
 CC = gcc
-RM = rm-f
+RM = rm -f
 FLAGS = -Wall -Wextra -Werror
 
 .c.o:

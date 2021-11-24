@@ -22,7 +22,7 @@ static size_t	len_rtn(const char *s)
 	return (len);
 }
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    write(fd, s, len_rtn(s));
+	write(fd, s, len_rtn(s));
 }

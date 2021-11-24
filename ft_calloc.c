@@ -6,7 +6,7 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:26:54 by andchris          #+#    #+#             */
-/*   Updated: 2021/10/26 16:26:37 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/16 21:24:23 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void	ft_bzero(void *s, size_t n)
 	return ;
 }
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*p;
 
-	p = malloc(count * size);
+	p = malloc(nmemb * size);
 	if (!p)
 		return (NULL);
-	ft_bzero(p, count * size);
+	ft_bzero(p, nmemb * size);
 	return ((void *)p);
 }

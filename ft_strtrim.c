@@ -6,91 +6,95 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 17:56:45 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/01 12:14:17 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/02 14:21:38 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t   len_rtn(const char *s)
+static	int	get_len(char const *str)
 {
-    size_t  len;
+	int	i;
 
-    len = 0;
-    while (s[len])
-        len++;
-    return (len);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		++i;
+	}
+	return (i);
 }
 
-static int  finder(char const *set, char c)
+static	int	does_exist(char const *set, char c)
 {
-    int index;
+	int	i;
 
-    index = 0;
-    while (set[index] != '\0')
-    {
-        if (set[index] == c)
-        {
-            return (1);
-        }
-    }
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (set[i] == c)
+		{
+			return (1);
+		}
+		++i;
+	}
+	return (0);
 }
 
-static int  get_begin(const char *s1, char const *set)
+static	int	get_match_end(char const *s1, char const *set)
 {
-    int index;
+	int	i;
 
-    index = 0;
-    while (s1[index] != '\0')
-    {
-        if(finder(set, s1[index]))
-            index++;
-        else
-            break;
-    }
-    return (index);
+	i = get_len(s1) - 1;
+	while (i > 0)
+	{
+		if (does_exist(set, s1[i]))
+			--i;
+		else
+			break ;
+	}
+	return (i);
 }
 
-static int  get_end(const char *s1, char const *set)
+static	int	get_match_start(const char *s1, char const *set)
 {
-    int index;
+	int	i;
 
-    index = len_rtn(s1) - 1;
-    while (index > 0)
-    {
-        if (finder(set, s1[index]))
-            index--;
-        else
-            break;
-    }
-    return (index);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		if (does_exist(set, s1[i]))
+			++i;
+		else
+			break ;
+	}
+	return (i);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char    *str;
-    int     start;
-    int     end;
-    int     len;
-    int     index;
+	char	*new_string;
+	int		start;
+	int		end;
+	int		size;
+	int		i;
 
-    start = get_begin(s1, set);
-    end = get_end(s1, set);
-    if (start == len_rtn(s1))
-        return (ft_calloc(1, 1));
-    if (end - start < 0)
-        len = (end - start + 2) * -1;
-    else
-        len = end - start + 2;
-    str = malloc(len);
-    if (!str)
-        return (NULL);
-    index = 0;
-    while (index < len - 1)
-    {
-        str[index] = s1[start + 1];
-        ++index;
-    }
-    str[index] = '\0';
-    return (str);
+	start = get_match_start(s1, set);
+	end = get_match_end(s1, set);
+	if (start == get_len(s1))
+		return (ft_calloc(1, 1));
+	if (end - start < 0)
+		size = (end - start + 2) * -1;
+	else
+		size = end - start + 2;
+	new_string = malloc(size);
+	if (!new_string)
+		return (NULL);
+	i = 0;
+	while (i < size - 1)
+	{
+		new_string[i] = s1[start + i];
+		++i;
+	}
+	new_string[i] = '\0';
+	return (new_string);
 }

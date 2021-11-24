@@ -6,36 +6,61 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:04:42 by andchris          #+#    #+#             */
-/*   Updated: 2021/10/26 16:19:47 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/03 21:21:59 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+static int	len_rtn(const char *str)
 {
 	int	i;
-	int	j;
-	int	temp;
 
 	i = 0;
-	j = 0;
-	if (little[j] == '\0')
-		return ((char *)big);
-	while (i < (int)len && big[i] != '\0')
+	while (str[i] != '\0')
 	{
-		temp = i;
-		while (little[j] == big[i]
-			&& little[i] != '\0'
-			&& big[i] != '\0' && i < (int)len)
-		{
-			j++;
-			i++;
-		}
-		if (little[i] == '\0')
-			return ((char *)&big[temp]);
-		i = temp + 1;
+		++i;
+	}
+	return (i);
+}
+
+static int	get_match(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	int		j;
+	size_t	k;
+
+	i = 0;
+	while (big[i] != '\0' && i < len)
+	{
+		k = i;
 		j = 0;
+		while (little[j] != '\0' && k < len)
+		{
+			if (big[k] == little[j])
+			{
+				++k;
+				++j;
+			}
+			else
+				break ;
+		}
+		if (little[j] == '\0')
+			return (k);
+		++i;
 	}
 	return (0);
+}
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	int	match;
+
+	if (little[0] == '\0')
+		return ((char *)big);
+	match = get_match(big, little, len);
+	if (match > 0)
+		return ((char *)big + (match - len_rtn(little)));
+	else
+		return ((char *) '\0');
 }
