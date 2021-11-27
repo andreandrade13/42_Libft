@@ -6,13 +6,13 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:24:49 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/02 14:04:41 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:45:40 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *str, char c)
+static int	count_words(char const *str, char c)
 {
 	int	i;
 	int	count;
@@ -33,7 +33,7 @@ static int	ft_count_words(char const *str, char c)
 	return (count);
 }
 
-static char	*ft_putword(char *word, char const *s, int i, int word_len)
+static char	*putword(char *word, char const *s, int i, int word_len)
 {
 	int	j;
 
@@ -69,7 +69,7 @@ static char	**ft_split_words(char const *s, char c, char **s2, int num_words)
 		s2[word] = (char *)malloc(sizeof(char) * (word_len + 1));
 		if (!s2)
 			return (0);
-		ft_putword(s2[word], s, i, word_len);
+		putword(s2[word], s, i, word_len);
 		word_len = 0;
 		word++;
 	}
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	num_words = ft_count_words(s, c);
+	num_words = count_words(s, c);
 	s2 = (char **)malloc(sizeof(char *) * (num_words + 1));
 	if (!s2)
 		return (0);

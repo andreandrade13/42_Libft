@@ -6,7 +6,7 @@
 /*   By: andchris <andchris1987@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:04:42 by andchris          #+#    #+#             */
-/*   Updated: 2021/11/03 21:21:59 by andchris         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:39:07 by andchris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ static int	len_rtn(const char *str)
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		++i;
-	}
 	return (i);
 }
 
 static int	get_match(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	int		j;
+	size_t	j;
 	size_t	k;
 
 	i = 0;
