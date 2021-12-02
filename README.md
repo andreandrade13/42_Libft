@@ -65,7 +65,7 @@ The goal is re-write standard functions to use on the next projects. Through the
 
 
 <p align="center">
-  <img src="https://www.thesteeplechasecompany.com/wp-content/uploads/2018/01/linkedin-2815969_960_720.jpg">
+  <img src="https://www.thesteeplechasecompany.com/wp-content/uploads/2018/01/linkedin-2815969_960_720.jpg" style="height: 100px; width: 100px;>
 </p>
 
 
