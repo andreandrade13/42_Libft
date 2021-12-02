@@ -65,7 +65,7 @@ The goal is re-write standard functions to use on the next projects. Through the
 
 
 <p align="center">
-  <a href="https://www.linkedin.com/andre-christofori/"><img src="https://user-images.githubusercontent.com/43358672/144511674-87bb4eb9-6250-4cbd-8739-239e6c9f8a97.png" style="height: 40px; width: 40px;"></a>
+  <a href="https://www.linkedin.com/in/andre-christofori/"><img src="https://user-images.githubusercontent.com/43358672/144511674-87bb4eb9-6250-4cbd-8739-239e6c9f8a97.png" style="height: 40px; width: 40px;"></a>
 </p>
 
 
