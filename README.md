@@ -40,3 +40,11 @@ The goal is re-write standard functions to use on the next projects. Through the
 ### Bonus Part
 - [ft_lstnew](https://github.com/andreandrade13/Libft/blob/main/ft_lstnew.c): returns a new element.
 
+
+
+
+
+
+<p align="center">
+  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fpt%2Ffree-png-dmita&psig=AOvVaw2RrqRQkq8BDL5HwzLfpkay&ust=1638567765852000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDu1OCKxvQCFQAAAAAdAAAAABAS">
+</p>
