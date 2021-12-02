@@ -9,3 +9,9 @@ The goal is re-write standard functions to use on the next projects. Through the
 <p align="center">
   <img src="https://user-images.githubusercontent.com/43358672/144503431-4c4d623b-9787-42be-9fe2-c99841945744.png">
 </p>
+
+<br>Part1 - Libc Functions (Mandatory)
+
+<br>Part2 - Additional Functions (Mandatory)
+
+<br>Bonus Part
