@@ -14,6 +14,25 @@ The goal is re-write standard functions to use on the next projects. Through the
 - [isalpha](https://github.com/andreandrade13/Libft/blob/main/ft_isalpha.c): checks for an alphabetic character.
 - [isdigit](https://github.com/andreandrade13/Libft/blob/main/ft_isdigit.c): checks for a digit (0 through 9).
 - [isalnum](https://github.com/andreandrade13/Libft/blob/main/ft_isalnum.c): checks for an alphanumeric character.
+- [isascii](https://github.com/andreandrade13/Libft/blob/main/ft_isascii.c): checks if it is a 7-bit unsigned char value that fits into the ASCII character set.
+- [isprint](https://github.com/andreandrade13/Libft/blob/main/ft_isprint.c): checks for any printable character including space.
+- [strlen](https://github.com/andreandrade13/Libft/blob/main/ft_strlen.c): calculates and return the length of str.
+- [memset](https://github.com/andreandrade13/Libft/blob/main/ft_memset.c): fill memory with a constant byte.
+- [bzero](https://github.com/andreandrade13/Libft/blob/main/ft_bzero.c): zero a byte string.
+- [memcpy](https://github.com/andreandrade13/Libft/blob/main/ft_memcpy.c): copy memory area.
+- [memmove](https://github.com/andreandrade13/Libft/blob/main/ft_memmove.c): copy memory area.
+- [strlcpy](https://github.com/andreandrade13/Libft/blob/main/ft_strlcpy.c): size-bounded string copying.
+- [toupper](https://github.com/andreandrade13/Libft/blob/main/ft_toupper.c): convert to uppercase.
+- [tolower](https://github.com/andreandrade13/Libft/blob/main/ft_tolower.c): convert to lowercase.
+- [strchr](https://github.com/andreandrade13/Libft/blob/main/ft_strchr.c): locate character in string (first occur).
+- [strrchr](https://github.com/andreandrade13/Libft/blob/main/ft_strrchr.c): locate character in string (last occur).
+- [strncmp](https://github.com/andreandrade13/Libft/blob/main/ft_strncmp.c): compare two strings
+- [memchr](https://github.com/andreandrade13/Libft/blob/main/ft_memchr.c): scan memory for a character (first occur).
+- [memcmp](https://github.com/andreandrade13/Libft/blob/main/ft_memcmp.c): compare memory areas.
+- [strnstr](https://github.com/andreandrade13/Libft/blob/main/ft_strnstr.c): locate a substring in a string.
+- [atoi](https://github.com/andreandrade13/Libft/blob/main/ft_atoi.c): convert a string to an integer.
+- [calloc](https://github.com/andreandrade13/Libft/blob/main/ft_calloc.c): allocate and free dynamic memory.
+- [strdup](https://github.com/andreandrade13/Libft/blob/main/ft_strdup.c): duplicate a string.
 
 ### Part2 - Additional Functions (Mandatory)
 - [ft_substr](https://github.com/andreandrade13/Libft/blob/main/ft_substr.c): returns a substring from the string.
