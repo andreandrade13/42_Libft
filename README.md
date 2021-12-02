@@ -16,5 +16,8 @@ The goal is re-write standard functions to use on the next projects. Through the
 - [isalnum](https://github.com/andreandrade13/Libft/blob/main/ft_isalnum.c): checks for an alphanumeric character.
 
 ### Part2 - Additional Functions (Mandatory)
+- [ft_substr](https://github.com/andreandrade13/Libft/blob/main/ft_substr.c): returns a substring from the string.
 
 ### Bonus Part
+- [ft_lstnew](https://github.com/andreandrade13/Libft/blob/main/ft_lstnew.c): returns a new element.
+
