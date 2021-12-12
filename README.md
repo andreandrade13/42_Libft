@@ -60,10 +60,16 @@ The goal is re-write standard functions to use on the next projects. Through the
 - [ft_lstclear](https://github.com/andreandrade13/Libft/blob/main/ft_lstclear.c): Deletes and frees the given element and every successor of that element.
 - [ft_lstiter](https://github.com/andreandrade13/Libft/blob/main/ft_lstiter.c): Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
 - [ft_lstmap](https://github.com/andreandrade13/Libft/blob/main/ft_lstmap.c): Iterates the list ’lst’ and applies the function ’f’ to the content of each element.
+<br>
+
+
+### Tests
+![image](https://user-images.githubusercontent.com/43358672/145719595-a9e814d0-91db-4ffb-86dd-752e71525fbc.png)
+![image](https://user-images.githubusercontent.com/43358672/145719811-2253388a-74bb-4742-9367-5dfe118b7a4d.png)
 
 
 
-
+<br>
 <p align="center">
   <a href="https://www.linkedin.com/in/andre-christofori/"><img src="https://user-images.githubusercontent.com/43358672/144511674-87bb4eb9-6250-4cbd-8739-239e6c9f8a97.png" style="height: 40px; width: 40px;"></a>
 </p>
